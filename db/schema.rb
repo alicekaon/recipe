@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171006173426) do
+ActiveRecord::Schema.define(version: 20171006195320) do
 
   create_table "cookbook_ingredients", force: :cascade do |t|
     t.integer "cookbook_id"
     t.integer "ingredient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "quantity", default: 0
   end
 
   create_table "cookbooks", force: :cascade do |t|

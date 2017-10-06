@@ -1,8 +1,8 @@
 class CreateCookbookIngredients < ActiveRecord::Migration[5.1]
   def change
     create_table :cookbook_ingredients do |t|
-      t.integer :cookbook_id
-      t.integer :ingredient_id
+      t.belongs_to :cookbook, index: true
+      t.belongs_to :ingredient, index: true
 
       t.timestamps
     end
