@@ -11,23 +11,20 @@
 </p>
 
 <p>
-  <strong>Text:</strong>
-  <%= @cookbook.text %>
-</p>
-
-<p>
   <strong>Time:</strong>
   <%= @cookbook.time %>
 </p>
 
 <p>
-  <strong>Int:</strong>
-  <%= @cookbook.int %>
+  <strong>Serving:</strong>
+  <%= @cookbook.serving %>
 </p>
 
 <p>
-  <strong>Serving:</strong>
-  <%= @cookbook.serving %>
+  <strong>Ingredients:</strong>
+  <% @cookbook.ingredients.each do |ingredient| %>
+    <%= ingredient.id %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |
