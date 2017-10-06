@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cookbook_ingredients
   resources :cookbooks
   resources :ingredients
   get 'welcome/index'
