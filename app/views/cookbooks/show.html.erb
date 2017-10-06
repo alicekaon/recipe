@@ -22,9 +22,13 @@
 
 <p>
   <strong>Ingredients:</strong>
-  <% @cookbook.ingredients.each do |ingredient| %>
-    <%= ingredient.id %>
+  <ul> 
+  <% @cookbook.cookbook_ingredients.each do |ci| %>
+  <li>
+    <%= ci.ingredient.name %>:<%= ci.quantity %>:<%= ci.ingredient.unit %> 
+  </li>
   <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |

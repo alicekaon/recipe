@@ -6,8 +6,28 @@
 </p>
 
 <p>
+  <strong>Cookbook Name:</strong>
+  <%= @cookbook_ingredient.cookbook.name %>
+</p>
+
+<p>
   <strong>Ingredient:</strong>
   <%= @cookbook_ingredient.ingredient_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cookbook_ingredient.ingredient.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @cookbook_ingredient.quantity %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @cookbook_ingredient.ingredient.unit %>
 </p>
 
 <%= link_to 'Edit', edit_cookbook_ingredient_path(@cookbook_ingredient) %> |

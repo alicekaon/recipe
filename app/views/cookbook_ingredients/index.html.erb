@@ -6,7 +6,11 @@
   <thead>
     <tr>
       <th>Cookbook</th>
+      <th>Cookbook Name</th>
       <th>Ingredient</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Unit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +19,11 @@
     <% @cookbook_ingredients.each do |cookbook_ingredient| %>
       <tr>
         <td><%= cookbook_ingredient.cookbook_id %></td>
+        <td><%= cookbook_ingredient.cookbook.name %></td>
         <td><%= cookbook_ingredient.ingredient_id %></td>
+        <td><%= cookbook_ingredient.ingredient.name %></td>
+        <td><%= cookbook_ingredient.quantity %></td>
+        <td><%= cookbook_ingredient.ingredient.unit %></td>
         <td><%= link_to 'Show', cookbook_ingredient %></td>
         <td><%= link_to 'Edit', edit_cookbook_ingredient_path(cookbook_ingredient) %></td>
         <td><%= link_to 'Destroy', cookbook_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>

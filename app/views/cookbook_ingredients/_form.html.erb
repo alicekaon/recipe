@@ -11,14 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
+
+<div class="field">
     <%= form.label :cookbook_id %>
-    <%= form.number_field :cookbook_id, id: :cookbook_ingredient_cookbook_id %>
+    <%= form.collection_select :cookbook_id, Cookbook.order(:id),:id,:name, include_blank: true %>
   </div>
+   
 
   <div class="field">
     <%= form.label :ingredient_id %>
-    <%= form.number_field :ingredient_id, id: :cookbook_ingredient_ingredient_id %>
+    <%= form.collection_select :ingredient_id, Ingredient.order(:id),:id,:name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, id: :cookbook_ingredient_quantity %>
   </div>
 
   <div class="actions">
