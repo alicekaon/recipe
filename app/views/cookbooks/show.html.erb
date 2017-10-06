@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cookbook.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cookbook.description %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @cookbook.text %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @cookbook.time %>
+</p>
+
+<p>
+  <strong>Int:</strong>
+  <%= @cookbook.int %>
+</p>
+
+<p>
+  <strong>Serving:</strong>
+  <%= @cookbook.serving %>
+</p>
+
+<%= link_to 'Edit', edit_cookbook_path(@cookbook) %> |
+<%= link_to 'Back', cookbooks_path %>
